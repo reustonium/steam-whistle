@@ -51,7 +51,7 @@ app.use(errorHandler());
  * Start Express server.
  */
 app.listen(app.get('port'), function() {
-  console.log('Express server listening on port %d', app.get('port'));
+  //console.log('Express server listening on port %d', app.get('port'));
 });
 
 module.exports = app;
