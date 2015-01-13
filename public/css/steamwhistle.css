@@ -1,0 +1,22 @@
+body{
+	background-color: #E84C3D
+}
+*{
+	font-family: 'Bree serif', sans-serif;
+}
+h1{
+	font-size: 48px;
+}
+.alert{
+	padding: 7px;
+}
+.center-vertical{
+	min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  	min-height: 100vh; /* These two lines are counted as one :-)       */
+
+	display: flex;
+  	align-items: center;
+}
+.glyphicon-user{
+	font-size: 10em;
+}

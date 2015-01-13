@@ -1,25 +1,62 @@
-extends layout
-
-block content
-  .page-header
-    h3 Contact Form
-
-  form.form-horizontal(role='form', method='POST')
-    input(type='hidden', name='_csrf', value=_csrf)
-    .form-group
-      label(class='col-sm-2 control-label', for='name') Name
-      .col-sm-8
-        input.form-control(type='text', name='name', id='name', autofocus=true)
-    .form-group
-      label(class='col-sm-2 control-label', for='email') Email
-      .col-sm-8
-        input.form-control(type='text', name='email', id='email')
-    .form-group
-      label(class='col-sm-2 control-label', for='message') Body
-      .col-sm-8
-        textarea.form-control(type='text', name='message', id='message', rows='7')
-    .form-group
-      .col-sm-offset-2.col-sm-8
-        button.btn.btn-primary(type='submit')
-          span.ion-paper-airplane
-          | Send
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='Steam Whistle is a web app to make sending encrypted messages easy!')
+    meta(name='author', content='Andy Ruestow')
+    link(rel='icon', href='favicon.ico')
+    title Steam Whistle
+    // Bootstrap core CSS
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='http://fonts.googleapis.com/css?family=Bree+Serif', rel='stylesheet', type='text/css')
+    link(href='/css/steamwhistle.css', rel='stylesheet')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body
+    .container-fluid
+      .row.center-vertical
+        .col-md-3.col-md-offset-3.text-center
+          h1 Steam Whistle
+          p
+            | Steam Whistle is an 'in-development' web app that aims to make sending
+            | encrypted messages easy.  It's built on the Keybase.io API, a new intuitive
+            | way to manage identities for PGP encryption.
+          br
+          p
+            | If you would like to recieve updates during development please sign up below. Thanks!
+          form.form-horizontal(role='form', method='POST')
+            .input-group
+              input.form-control(type='email', placeholder='your email address', name='email')
+              span.input-group-btn
+                button.btn.btn-default(type='sumbit') Go!
+          if messages.errors
+            .alert.alert-danger.fade.in
+              button.close(type='button', data-dismiss='alert')
+                span.glyphicon.glyphicon-remove
+              for error in messages.errors
+                div= error.msg
+          if messages.info
+            .alert.alert-info.fade.in
+              button.close(type='button', data-dismiss='alert')
+                span.glyphicon.glyphicon-remove
+              for info in messages.info
+                div= info.msg
+          if messages.success
+            .alert.alert-success.fade.in
+              button.close(type='button', data-dismiss='alert')
+                span.glyphicon.glyphicon-remove
+              for success in messages.success
+                div= success.msg
+        .col-md-3.text-center
+          span.glyphicon.glyphicon-user
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='/js/bootstrap.min.js')

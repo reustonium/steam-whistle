@@ -30,3 +30,4 @@ node_modules
 # Heroku Local Environment Variables
 .env
 www/
+config/secrets.js
