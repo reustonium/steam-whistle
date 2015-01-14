@@ -1,0 +1,47 @@
+body{
+	background-color: #E84C3D;
+}
+*{
+	font-family: 'Bree serif', sans-serif;
+}
+h1{
+	font-size: 48px;
+}
+footer {
+	color: #333;
+	background-color: #CF3324;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	line-height: 40px;
+}
+a:link{
+	text-decoration: none;
+	color: #333;
+}
+a:visited{
+	text-decoration: none;
+	color: #333;
+}
+.center-vertical{
+	min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+	min-height: 100vh; /* These two lines are counted as one :-) */
+	display: flex;
+	align-items: center;
+}
+.alert{
+	padding: 7px;
+}
+.glyphicon-user{
+	font-size: 10em;
+}
+@media (max-width: 767px) {
+	.glyphicon-user{
+		padding-top: 20px;
+	}
+	.center-vertical{
+		min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+		min-height: 100vh; /* These two lines are counted as one :-) */
+		display: inline-block;
+	}
+}
