@@ -1,0 +1,11 @@
+language: node_js
+deploy:
+  provider: heroku
+  api_key:
+    stable:
+      secure: Okg0iskinQb1JJPs7L50HvvVaRuRuhArWtDlCQFikpcqDkk9cCgFEvULfITOV3GRYuv/CYijMwp9c+4VoYf1upoLVpCDO/VjLNgrANuqvt0N5HUihMY9dsE9D/9nGGm89GvJL9HlnwQ4mH/uIhLXy32zLqHn68EvWKBsqyCzlzk=
+    dev:
+      secure: bpU7JnTdB0A/9lDh/pcJon23RFGXmgsDxplauWQ9GR6csKNIei/tUTJUerUm94UO/E13j6A8/EhCjGMLTSqqPAo8eJv6qqa8phPwfsOIEpNJ0Vgcln17aW6QcHfvCzlydpG2OpPADGXidPsfBimcvkEEQOJKMvJRGwKYjLFupsA=
+  app:
+    stable: obscure-garden-4459
+    dev: steamwhistle
