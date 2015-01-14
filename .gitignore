@@ -31,3 +31,4 @@ node_modules
 .env
 www/
 config/secrets.js
+setup.sh
