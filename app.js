@@ -18,7 +18,7 @@ var homeController = require('./controllers/home');
 /**
  * API keys and Passport configuration.
  */
-var secrets = require('./config/secrets');
+var vars = require('./config/variables');
 
 /**
  * Create Express server.
@@ -55,6 +55,8 @@ app.use(errorHandler());
  */
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port %d', app.get('port'));
+  console.log(process.env.MANDRILL_USER);
+  console.log(process.env.MANDRILL_PASSWORD);
 });
 
 module.exports = app;

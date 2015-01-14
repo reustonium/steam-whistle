@@ -1,10 +1,10 @@
-var secrets = require('../config/secrets');
+var vars = require('../config/variables');
 var nodemailer = require("nodemailer");
 var transporter = nodemailer.createTransport({
 	service: 'Mandrill',
 	auth: {
-		user: secrets.mandrill.user,
-		pass: secrets.mandrill.password
+		user: vars.mandrill.user,
+		pass: vars.mandrill.pass
 	}
 });
 /**

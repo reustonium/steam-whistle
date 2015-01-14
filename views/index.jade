@@ -20,7 +20,9 @@ html(lang='en')
   body
     .container-fluid
       .row.center-vertical
-        .col-md-3.col-md-offset-3.text-center
+        .col-sm-3.col-sm-offset-3.col-sm-push-3.text-center
+          span.glyphicon.glyphicon-user
+        .col-sm-3.col-sm-pull-3.text-center
           h1 Steam Whistle
           p
             | Steam Whistle is an 'in-development' web app that aims to make sending
@@ -52,8 +54,13 @@ html(lang='en')
                 span.glyphicon.glyphicon-remove
               for success in messages.success
                 div= success.msg
-        .col-md-3.text-center
-          span.glyphicon.glyphicon-user
+    footer
+      .container.text-center
+        ul.list-inline
+          li
+            a(href='https://github.com/reustonium/steam-whistle') GitHub Project
+          li
+            a(href='https://github.com/reustonium/steam-whistle/issues') Issues
     //
       Bootstrap core JavaScript
       ==================================================
