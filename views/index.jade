@@ -1,0 +1,69 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='Steam Whistle is a web app to make sending encrypted messages easy!')
+    meta(name='author', content='Andy Ruestow')
+    link(rel='icon', href='favicon.ico')
+    title Steam Whistle
+    // Bootstrap core CSS
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='http://fonts.googleapis.com/css?family=Bree+Serif', rel='stylesheet', type='text/css')
+    link(href='/css/steamwhistle.css', rel='stylesheet')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body
+    .container-fluid
+      .row.center-vertical
+        .col-sm-3.col-sm-offset-3.col-sm-push-3.text-center
+          span.glyphicon.glyphicon-user
+        .col-sm-3.col-sm-pull-3.text-center
+          h1 Steam Whistle
+          p
+            | Steam Whistle is an 'in-development' web app that aims to make sending
+            | encrypted messages easy.  It's built on the Keybase.io API, a new intuitive
+            | way to manage identities for PGP encryption.
+          br
+          p
+            | If you would like to recieve updates during development please sign up below. Thanks!
+          form.form-horizontal(role='form', method='POST')
+            .input-group
+              input.form-control(type='email', placeholder='your email address', name='email')
+              span.input-group-btn
+                button.btn.btn-default(type='sumbit') Go!
+          if messages.errors
+            .alert.alert-danger.fade.in
+              button.close(type='button', data-dismiss='alert')
+                span.glyphicon.glyphicon-remove
+              for error in messages.errors
+                div= error.msg
+          if messages.info
+            .alert.alert-info.fade.in
+              button.close(type='button', data-dismiss='alert')
+                span.glyphicon.glyphicon-remove
+              for info in messages.info
+                div= info.msg
+          if messages.success
+            .alert.alert-success.fade.in
+              button.close(type='button', data-dismiss='alert')
+                span.glyphicon.glyphicon-remove
+              for success in messages.success
+                div= success.msg
+    footer
+      .container.text-center
+        ul.list-inline
+          li
+            a(href='https://github.com/reustonium/steam-whistle') GitHub Project
+          li
+            a(href='https://github.com/reustonium/steam-whistle/issues') Issues
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='/js/bootstrap.min.js')
