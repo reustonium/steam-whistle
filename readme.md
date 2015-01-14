@@ -1,5 +1,5 @@
 ## Steam Whistle
-Steam Whistle is a web application for facilitating easy transmission of encrypted messages.
+[Steam Whistle](http://steamwhistle.io) is a web application for facilitating easy transmission of encrypted messages.
 Communicating securely and discretely has never been more important.  Whether you
 are sharing information with your doctor, lawyer, or friend, Steam Whistle aims to 
 make the process intuitave and easy.
