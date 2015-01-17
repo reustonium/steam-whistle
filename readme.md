@@ -1,4 +1,4 @@
-## Steam Whistle ![dev](https://img.shields.io/badge/dev-0.1.0-yellow.svg) ![stable](https://img.shields.io/badge/stable-0.1.0-brightgreen.svg) ![cc](https://img.shields.io/codeclimate/github/reustonium/steam-whistle.svg)
+## Steam Whistle ![dev](https://img.shields.io/badge/dev-0.1.1-yellow.svg) ![stable](https://img.shields.io/badge/stable-0.1.0-brightgreen.svg) ![cc](https://img.shields.io/codeclimate/github/reustonium/steam-whistle.svg)
 
 [Steam Whistle](http://steamwhistle.io) is a web application for facilitating easy transmission of encrypted messages.
 Communicating securely and discretely has never been more important.  Whether you

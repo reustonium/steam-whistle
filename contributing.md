@@ -8,4 +8,5 @@ before you get started.
 4. Set Environmental Variables
 `export MANDRILL_USER=youremail@google.com`
 `export MANDRILL_PASSWORD=APIKEYFROMMANDRILL`
+`export SESSION_SECRET=somethingsecret`
 5. Run the app `node app`

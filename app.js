@@ -11,11 +11,6 @@ var flash = require('express-flash');
 var session = require('express-session');
 
 /**
- * Controllers (route handlers).
- */
-var homeController = require('./controllers/home');
-
-/**
  * API keys and Passport configuration.
  */
 var vars = require('./config/variables');
@@ -33,8 +28,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cookieParser('keyboard cat'));
-app.use(session({ cookie: { maxAge: 60000 }}));
+app.use(cookieParser(vars.session_secret));
+app.use(session({
+	secret: vars.session_secret,
+	resave: false,
+	saveUninitialized: true,
+	cookie: { maxAge: 60000 }}));
 app.use(flash());
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
@@ -42,8 +41,11 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
 /**
  * Primary app routes.
  */
-app.get('/', homeController.index);
-app.post('/', homeController.postContact);
+
+/**
+ * API routes.
+ */
+ app.use('/api/v1/', require('./routes/api'));
 
 /**
  * Error Handler.
