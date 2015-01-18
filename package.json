@@ -1,18 +1,14 @@
 {
   "name": "steam-whistle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "node": "0.10.x",
     "npm": "2.1.x"
   },
   "description": "Steam Whistle is a web application for facilitating easy transmission of encrypted messages.",
   "main": "app.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "start": "node app.js",
-    "test": "mocha"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

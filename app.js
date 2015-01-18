@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
  * Primary app routes.
  */
 app.get('/', homeController.index);
-app.post('/', homeController.postContact)
+app.post('/', homeController.postContact);
 
 /**
  * Error Handler.
@@ -55,8 +55,6 @@ app.use(errorHandler());
  */
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port %d', app.get('port'));
-  console.log(process.env.MANDRILL_USER);
-  console.log(process.env.MANDRILL_PASSWORD);
 });
 
 module.exports = app;

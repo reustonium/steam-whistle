@@ -1,4 +1,5 @@
-## Steam Whistle
+## Steam Whistle ![dev](https://img.shields.io/badge/dev-0.1.0-yellow.svg) ![stable](https://img.shields.io/badge/stable-0.1.0-brightgreen.svg) ![cc](https://img.shields.io/codeclimate/github/reustonium/steam-whistle.svg)
+
 [Steam Whistle](http://steamwhistle.io) is a web application for facilitating easy transmission of encrypted messages.
 Communicating securely and discretely has never been more important.  Whether you
 are sharing information with your doctor, lawyer, or friend, Steam Whistle aims to 
@@ -28,6 +29,7 @@ Steam Whistle follows the [git flow](http://nvie.com/posts/a-successful-git-bran
 The 'stable' branch represents the currently deployed code and API. 'dev' represents new features currently
 under development.
 
+#### Issues ![issues](https://img.shields.io/github/issues/reustonium/steam-whistle.svg)
 Steam Whistle welcomes contributors, if you have an idea please file an [issue](https://github.com/reustonium/steam-whistle/issues).  If you'd like to contribute code please send a pull request!
 
 Steam Whistle is covered by the [GPLv2](https://github.com/reustonium/steam-whistle/blob/stable/LICENSE) Software License.

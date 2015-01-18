@@ -11,7 +11,7 @@ html(lang='en')
     // Bootstrap core CSS
     link(href='/css/bootstrap.min.css', rel='stylesheet')
     // Custom styles for this template
-    link(href='http://fonts.googleapis.com/css?family=Bree+Serif', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Bree+Serif', rel='stylesheet', type='text/css')
     link(href='/css/steamwhistle.css', rel='stylesheet')
     // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
     //if lt IE 9
@@ -21,7 +21,9 @@ html(lang='en')
     .container-fluid
       .row.center-vertical
         .col-sm-3.col-sm-offset-3.col-sm-push-3.text-center
-          span.glyphicon.glyphicon-user
+          img(
+            src='/img/sw_dark.png'
+            width='280px')
         .col-sm-3.col-sm-pull-3.text-center
           h1 Steam Whistle
           p
@@ -67,3 +69,4 @@ html(lang='en')
     // Placed at the end of the document so the pages load faster
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script(src='/js/bootstrap.min.js')
+    // Dev-Branch Release 0.1.1
