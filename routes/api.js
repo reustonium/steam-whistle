@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
-var scrypt = require('scrypt');
-jsSHA = require("jssha");
+var triplesec = require('triplesec');
 
 router.post('/login/:email_or_username/password/:password', function(req, res, next){
 	var email_or_username = req.params.email_or_username;
@@ -11,10 +10,17 @@ router.post('/login/:email_or_username/password/:password', function(req, res, n
 	request({url:url, json:true}, function(err, res, body){
 		var salt = body.salt;
 		var login_session = body.login_session;
-		var pwh = scrypt(req.params.password, hex2bin(salt), N=215, r=8, p=1, dkLen=224)[192:224]
-		var hmac_pwh = 
-		var url = 'https://keybase.io/_/api/1.0/login.json' +
-
+		//var url = 'https://keybase.io/_/api/1.0/login.json' + 
+		triplesec.encrypt ({
+		    data: new triplesec.Buffer('hello andy'),
+		    key: new triplesec.Buffer('test'),
+		    progress_hook: function (obj) { /* ... */ }
+		}, function(err, buff) {
+		    if (! err) {
+		        var ciphertext = buff.toString('hex');
+		    	console.log(ciphertext);
+		    } else {console.log(err);}
+		});
 	});
 	next();
 }, function(req, res, next){
